@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Travelin
+        link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css")
+        style
+            include css/home.css
+    body
+        header
+            ul(id="dropdown1" class="dropdown-content")
+                li
+                    a(href="/profile" class="black-text") #{username}
+                li(class="divider")
+                li
+                    a(href="/logout" class="waves-effect waves-light btn red btn-logout white-text") Logout
+            
+            ul(id="dropdown2" class="dropdown-content")
+                li
+                    a(href="/profile") #{username}
+                li(class="divider")
+                li
+                    a(href="/logout" class="waves-effect waves-light btn red") Logout
+            nav(class="white")
+                div(class="container")
+                    div(class="nav-wrapper")
+                        a(href="#" class="brand-logo black-text") Travel#[i]in
+                        a(href="#" data-target="mobile-nav" class="sidenav-trigger") 
+                            i(class="material-icons black-text") menu
+                        ul(class="right hide-on-med-and-down")
+                            li
+                                a(class="dropdown-trigger black-text" data-target="dropdown1") Profile
+                                    i(class="material-icons right") arrow_drop_down
+                ul(class="sidenav" id="mobile-nav")
+                    li
+                        a(class="dropdown-trigger" data-target="dropdown2") Profile
+                            i(class="material-icons right") arrow_drop_down
+        
+        main
+            div(class="container")
+                div(class="row" id="add")
+                    div(class="col s4 offset-s8 m4 offset-m8 l2 offset-l10")
+                        a(href="/addList" class="waves-effect waves-light btn blue crud") Add
+                            i(class="material-icons right") add 
+                div(class="row")
+                    each dest in destination
+                        div(class="col s12 m12 l12")
+                            div(class="card")
+                                div(class="card-image")
+                                    img(src=dest.image) 
+                                    span(class="card-title") #{dest['name']}
+                                div(class="card-content")
+                                    p #{dest['city']}
+                                    p #{dest['description']}
+                            
+
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js")    
+        script
+            include script/index.js
+        

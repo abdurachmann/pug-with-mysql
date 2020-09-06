@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Travelin
+        link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css")
+        style
+            include css/login.css
+    body
+        div(id="login")
+            div(class="container")
+                div(class="row")
+                    div(class="col s10 offset-s1 m10 offset-m1 l6 offset-l3")
+                        img(src="https://thumbs.gfycat.com/DirtyGranularGuppy.webp" alt="gif-login" class="responsive-img" id="login-gif")
+                        //- img(src=("https://i.ibb.co/jWcgq5L/login-gif.gif") alt="gif-login" class="responsive-img" id="login-gif")
+                        h4(class="center text-login") Login
+                        if msg
+                            div(class="alert") #{msg}
+                                span(class="closebtn" onclick="this.parentElement.style.display='none';") &times
+                            //- p(style="color: #ff0") #{msg}
+                        form(action="/login", method="post" id="form-login")
+                            div(class="row")
+                                div(class="input-field col s12 m112 l10 offset-l1")
+                                    input(type="text" name="username" placeholder="Username")
+                                    input(type="password" name="password" placeholder="Password")
+                                    button(class="btn waves-effect waves-light btn-login blue" type="submit") Login
+                                        i(class="material-icons right") arrow_forward
+                        p(class="center copy-right") &copy;Abdu Rachman Ruchendar 2020

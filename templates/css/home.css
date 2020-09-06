@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.brand-logo {
+    font-family: cursive;
+}
+
+#dropdown1 {
+    width: 100%;
+}
+
+#add {
+    margin-top: 5%;
+}
+
+.name-destination {
+    background-color: #35393a;
+    opacity: 0.6
+}
+
+.alert {
+    margin-top: 5%;
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+.crud {
+    margin-bottom: 2%;
+    width: 100%;
+}
+
+nav ul a.btn {
+    margin-top: 5%;
+}
+
+.dropdown-content li>a {
+    font-size: 14px;
+    padding: 7px 10px;
+}
+
+@media screen and (max-width : 800px) {
+    .dropdown-content li>a {
+        padding: 3px 10px;
+    }
+}

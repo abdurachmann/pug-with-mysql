@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Travelin
+        link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css")
+    body
+        div(class="container")
+            div(class="row")
+                h5(class="center") Add Data
+                form(action="/addList" method="post" class="col s12 m12 l12")
+                    div(class="row")
+                        div(class="input-field col s12 m12 l12" style="display: none;")
+                            input(type="text", name="id_destination", value='null', class="validate", readonly="true" disabled)
+                            label(for="id_destination") ID
+                    
+                    div(class="row")
+                        div(class="input-field col s12 m12 l6")
+                            input(type="text" name="name" id="name" class="validate")
+                            label(for="name" style="font-size: 1.2em;") Name
+                        
+                        div(class="input-field col s12 m12 l6")
+                            input(type="text" name="city" id="city" class="validate")
+                            label(for="city" style="font-size: 1.2em;") City
+                    
+                    div(class="row")
+                        div(class="input-field col s12 m12 l12")
+                            input(type="text" name="image" id="image" class="validate" placeholder="link image")
+                            label(for="image" style="font-size: 1.2em;") Image
+                    
+                        div(class="input-field col s12 m12 l12")
+                            textarea(name="description" class="materialize-textarea" id="description")
+                            label(for="description" style="font-size: 1.2em;") Description
+                    
+                        div(class="input-field col s12 m12 l12")
+                            select(name="category")
+                                option(value="1") Beach
+                                option(value="2") Mountain
+                            label Category
+
+                    div(class="row")
+                        div(class="col s3 offset-s3")
+                            button(class="btn waves-effect waves-light blue" type="submit" style="width: 100%;") Save
+                            //- input(type="submit", value="Save" class="waves-effect waves-light btn blue" style="width: 100%;")
+                        div(class="col s3")
+                            a(class="btn waves-effect waves-light red" style="width: 100%;" onClick="javascript:history.go(-1);") Cancel
+                            //- input(type="button", value="Cancel" class="waves-effect waves-light btn red" style="width: 100%;" onClick="javascript:history.go(-1);")
+
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js")
+        script
+            include script/index.js
