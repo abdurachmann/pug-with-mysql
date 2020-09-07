@@ -32,9 +32,13 @@ const server = http.createServer( (req, res) => {
 });
 
 const PORT = process.env.PORT || 3000;
-const runServer = server.listen(PORT, "127.0.0.1", () => {
-    const host = runServer.address().address;
-    const port = runServer.address().port;
+server.listen(PORT);
+console.log(`Server aktif di port ${PORT}`);
 
-    console.log("App listening at http://%s:%s", host, port);
-});
+// const runServer = server.listen(PORT, "127.0.0.1", () => {
+//     const host = runServer.address().address;
+//     const port = runServer.address().port;
+
+//     console.log("App listening at http://%s:%s", host, port);
+// });
+
