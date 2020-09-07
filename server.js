@@ -20,7 +20,8 @@ const server = http.createServer( (req, res) => {
     routes(session, db, req, res);
 });
 
-const runServer = server.listen(3000, "127.0.0.1", () => {
+const PORT = process.env.PORT || 3000;
+const runServer = server.listen(PORT, "127.0.0.1", () => {
     const host = runServer.address().address;
     const port = runServer.address().port;
 
