@@ -41,9 +41,9 @@ const routes = (session, db, req, res) => {
                         throw error;
                     } else {
                         let value = result[0]['cnt'];
-                        console.log(`Nilainya adalah ${value}`);
+                        // console.log(`Nilainya adalah ${value}`);
                         let role = result[0]['level_user'];
-                        console.log(role);
+                        // console.log(role);
                         
                         if ( value > 0) {
                             // login success

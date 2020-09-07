@@ -11,7 +11,7 @@ html(lang="en")
             div(class="row")
                 h5(class="center") Update Data
                 form(action="/update", method="post" class="col s12 m12 l12")
-                    div(class="row")
+                    div(class="row" hidden)
                         div(class="input-field col s12 m12 l12")
                             input(type="text" name="id_destination" value=destination['id_destination'] class="validate" readonly="true")
                             label(for="id_destination") ID
@@ -36,16 +36,20 @@ html(lang="en")
                             label(for="description" style="font-size: 1.2em;") Description
 
                         div(class="input-field col s12 m12 l12")
-                            input(type="text" name="category" id="name" value=destination['category'] class="validate" readonly="true")
-                            label(for="category" style="font-size: 1.2em;") Category
+                            select(name="category")
+                                option(value="1") Beach
+                                option(value="2") Mountain
+                            label Category
+
+                        //- div(class="input-field col s12 m12 l12")
+                        //-     input(type="text" name="category" id="name" value=destination['category'] class="validate" readonly="true")
+                        //-     label(for="category" style="font-size: 1.2em;") Category
                     
                     div(class="row")
                         div(class="col s3 offset-s3")
                             button(class="btn waves-effect waves-light blue" type="submit" style="width: 100%;") Save
-                            //- input(type="submit", value="Save" class="waves-effect waves-light btn blue" style="width: 100%;")
                         div(class="col s3")
                             a(class="btn waves-effect waves-light red" style="width: 100%;" onClick="javascript:history.go(-1);") Cancel
-                            //- input(type="button", value="Cancel" class="waves-effect waves-light btn red" style="width: 100%;" onClick="javascript:history.go(-1);")
 
         script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js")
         script
