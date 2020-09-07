@@ -11,6 +11,17 @@ const db = Client.createConnection({
     database: 'sql12363793'
 });
 
+// memanggil method connect
+db.connect( error => {
+    if (error) {
+        console.log('Koneksi server MariaDB gagal');
+        throw error;
+    } else {
+        console.log('Koneksi MariaDB Berhasil');
+        // db.end();
+    }
+})
+
 // membuat session
 const session = new NodeSession({
     secret: 'Q3UBzdH9GEfiRCTKbi5MTPyChpzXLsTD'
