@@ -1,8 +1,0 @@
-# pug-with-mysql
-# ---- Login ----
-# Role Admin
-username = rachman
-password = admin
-# Role User
-Username = andin
-password = 1234
